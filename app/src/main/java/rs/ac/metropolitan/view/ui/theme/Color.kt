@@ -1,4 +1,4 @@
-package rs.ac.metropolitan.ui.theme
+package rs.ac.metropolitan.view.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
