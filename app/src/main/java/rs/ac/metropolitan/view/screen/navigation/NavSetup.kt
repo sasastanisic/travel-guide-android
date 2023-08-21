@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import rs.ac.metropolitan.common.Constants
 import rs.ac.metropolitan.view.screen.all_travels_screen.AllTravelsScreen
+import rs.ac.metropolitan.view.screen.new_travel_screen.NewTravelScreen
 
 @Composable
 fun NavSetup(navController: NavHostController) {
@@ -20,7 +21,7 @@ fun NavSetup(navController: NavHostController) {
         }
 
         composable(route = Screen.NewTravelScreen.route) {
-
+            NewTravelScreen(navController)
         }
     }
 
