@@ -18,7 +18,6 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 
-//@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TravelDetailScreen(
     navController: NavController,
