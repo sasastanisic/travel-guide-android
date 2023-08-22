@@ -75,7 +75,8 @@ fun NewTravelScreen(
                         )
                     }
                     Text(
-                        text = "Create new travel", style = MaterialTheme.typography.titleLarge,
+                        text = "Create new travel",
+                        style = MaterialTheme.typography.titleLarge,
                         modifier = Modifier.align(Alignment.Center)
                     )
                 }

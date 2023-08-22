@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import rs.ac.metropolitan.common.Constants
 import rs.ac.metropolitan.view.screen.all_travels_screen.AllTravelsScreen
 import rs.ac.metropolitan.view.screen.new_travel_screen.NewTravelScreen
+import rs.ac.metropolitan.view.screen.travel_detail_screen.TravelDetailScreen
 
 @Composable
 fun NavSetup(navController: NavHostController) {
@@ -17,7 +18,7 @@ fun NavSetup(navController: NavHostController) {
         }
 
         composable(route = Screen.TravelDetailScreen.route + "/{${Constants.PARAM_TRAVEL_ID}}") {
-
+            TravelDetailScreen(navController)
         }
 
         composable(route = Screen.NewTravelScreen.route) {
