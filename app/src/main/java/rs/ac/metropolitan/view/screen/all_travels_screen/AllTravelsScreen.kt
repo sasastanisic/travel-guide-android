@@ -1,21 +1,26 @@
 package rs.ac.metropolitan.view.screen.all_travels_screen
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import rs.ac.metropolitan.R
 import rs.ac.metropolitan.domain.model.Travel
 import rs.ac.metropolitan.view.screen.navigation.Screen
 
@@ -78,14 +83,28 @@ fun TravelCardView(travel: Travel, onItemClick: (Travel) -> Unit) {
             modifier = Modifier
                 .padding(8.dp)
         ) {
+            Image(
+                painter = painterResource(id = R.drawable.all_travels),
+                contentDescription = "All travels",
+                modifier = Modifier
+                    .size(60.dp)
+                    .clip(CircleShape)
+            )
             Column(
                 modifier = Modifier.padding(start = 10.dp)
             ) {
                 Text(
                     text = "${travel.name}, ${travel.country}",
-                    color = MaterialTheme.colorScheme.secondary,
-                    fontSize = 18.sp,
+                    color = MaterialTheme.colorScheme.tertiary,
+                    fontSize = 20.sp,
                     fontWeight = FontWeight.Bold
+                )
+                Spacer(modifier = Modifier.height(2.dp))
+                Text(
+                    text = travel.accommodation,
+                    color = MaterialTheme.colorScheme.tertiary,
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.SemiBold
                 )
             }
         }
